@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noEmitHelpers": true,
+        "importHelpers": true,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "preserveSymlinks": true,
+        "noLib": false,
+        "lib": [
+            "dom",
+            "es5",
+            "scripthost",
+            "es2015.collection",
+            "es2015.core",
+            "es2015.generator",
+            "es2015.iterable",
+            "es2015.promise",
+            "es2015.symbol",
+            "es2016.array.include",
+            "es2018.promise",
+            "es6"
+        ],
+        "typeRoots": [
+            "node_modules",
+            "node_modules/@types"
+        ],
+        "types": [
+            "angular"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "~/*": [
+                "app/*"
+            ],
+            "*": [
+                "*",
+                "app/*"
+            ]
+        }
+    },
+    "exclude": [
+        "platforms",
+        "node_modules"
+    ],
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "useCache": false,
+    "isolatedModules": true
+}

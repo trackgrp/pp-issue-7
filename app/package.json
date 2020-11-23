@@ -1,0 +1,11 @@
+{
+  "main": "main.js",
+  "discardUncaughtJsExceptions": false,
+  "android": {
+    "v8Flags": "--expose_gc",
+    "forceLog": true,
+    "handleTimeZoneChanges": true,
+    "maxLogcatObjectSize": 2048,
+    "markingMode": "none"
+  }
+}

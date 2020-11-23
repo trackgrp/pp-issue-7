@@ -1,0 +1,14 @@
+<GridLayout class="page page-content login-page main-container">
+  <StackLayout class="stackLayout">
+    <DropDown #dd
+      [class]="cssClass"
+      [items]="items"
+      [(ngModel)]="selectedIndex"
+      [hint]="hint"
+      (selectedIndexChanged)="onchange($event)"
+      (opened)="onopen()"
+      (closed)="onclose()"
+      row="0"
+      colSpan="2"></DropDown>
+  </StackLayout>
+</GridLayout>
