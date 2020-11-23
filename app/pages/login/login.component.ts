@@ -7,7 +7,12 @@ import { SelectedIndexChangedEventData, ValueList } from '@proplugins/nativescri
   templateUrl: './login.html',
 })
 export class LoginComponent implements OnInit {
-  public ngOnInit(): void {
+  public selectedIndex: number = null;
+  public hint = "My Hint";
+  public items: ValueList<string>;
+  public cssClass: string = "default";
+
+  public ngOnInit() {
     this.items = new ValueList<string>();
     for (let loop = 0; loop < 200; loop++) {
       this.items.push({
@@ -16,11 +21,6 @@ export class LoginComponent implements OnInit {
       });
     }
   }
-
-  public selectedIndex: number = null;
-  public hint = "My Hint";
-  public items: ValueList<string>;
-  public cssClass: string = "default";
 
   public onchange(args: SelectedIndexChangedEventData) {
     console.log(`Drop Down selected index changed from ${args.oldIndex} to ${args.newIndex}. New value is "${this.items.getValue(
